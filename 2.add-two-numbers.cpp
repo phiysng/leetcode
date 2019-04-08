@@ -17,8 +17,9 @@ public:
         ListNode *head = new ListNode(-1);
         ListNode *p = head;
         bool flag = false;//是否进位
-        ListNode p1 = l1, p2 = l2;
-        while (p1 || p2 || flah) {
+        ListNode *p1 = l1, *p2 = l2;
+        int sum = 0;
+        while (p1 || p2 || flag) {
             sum = flag;
             if(p1){
                 sum += p1->val;
