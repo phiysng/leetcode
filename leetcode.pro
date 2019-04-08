@@ -8,7 +8,8 @@ SOURCES += \
     39.combination-sum.cpp \
     40.combination-sum-ii.cpp \
     53.maximum-subarray.cpp \
-    216.combination-sum-iii.cpp
+    216.combination-sum-iii.cpp \
+    2.add-two-numbers.cpp
 
 
 HEADERS += \
