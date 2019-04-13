@@ -2,6 +2,6 @@
 
 
 
-![result](C:\Users\WuYuanshou\Desktop\leetcode\hdu_debug_cup\result.JPG)
+![result](./result.JPG)
 
 73/435
