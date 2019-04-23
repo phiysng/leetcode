@@ -11,7 +11,7 @@
 #include<functional>
 
 using namespace std;
-typedef std::unordered_multimap<int, int> Mymap;
+
 int main()
 {
     int a, b;
