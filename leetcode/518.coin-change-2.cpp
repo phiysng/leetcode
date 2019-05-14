@@ -5,20 +5,22 @@ public:
     {
         //假设数组已排序
         //O(n) 每次遍历增加一种硬币的可能性
-        if(amount == 0) return 1;
-        if(coins.size() < 1) return 0;
+        if (amount == 0)
+            return 1;
+        if (coins.size() < 1)
+            return 0;
         vector<int> dp(amount + 1);
         dp[0] = 1;
-        for(int i : coins){
-            for(int j = i ; j < amount + 1 ; ++j){
-                dp[j] += dp[j-i];
+        for (int i : coins)
+        {
+            for (int j = i; j < amount + 1; ++j)
+            {
+                dp[j] += dp[j - i];
             }
         }
-        
-        
+
         return dp[amount];
     }
-
 };
 /*
 //DFS 超时
