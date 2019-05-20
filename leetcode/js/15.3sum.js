@@ -4,16 +4,7 @@
  */
 var threeSum = function (nums) {
     /// 三指针
-    nums.sort(function compare(a, b) {
-        if (a < b) {           // 按某种排序标准进行比较, a 小于 b
-            return -1;
-        }
-        if (a > b) {
-            return 1;
-        }
-        // a must be equal to b
-        return 0;
-    });
+    nums.sort((a, b) => a - b);
     let res = []
     for (var i = 0; i < nums.length - 2; ++i) {
         if (i !== 0) {
