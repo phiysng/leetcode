@@ -9,3 +9,5 @@
 - 14 [剪绳子](./maxProductAfterCutting.cpp)
 - 15[二进制中1的个数](./numberOf1.cpp) 
 - 16[数值的整数次方](./Power.cpp)
+- 18[删除链表的节点](./DeleteNode.cpp)
+- 21[调整数组顺序使奇数位于偶数前面](./ReorderOddEven.cpp)
