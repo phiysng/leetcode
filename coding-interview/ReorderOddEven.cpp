@@ -89,3 +89,38 @@ bool isEven(int n)
 {
     return n & 1;
 }
+
+/////////////////////////////////////////////////////////
+/// 要求稳定排序
+class Solution
+{
+public:
+    void reOrderArray(vector<int> &arr)
+    {
+        /// 实际上是一个 Partition 问题
+        /// 来自 QuickSort
+        int begin = 0, end = arr.size() - 1;
+        /// 要求稳定就emmmm
+        for (int i = 0; i < arr.size(); ++i)
+        {
+            /// 存在的话 第一个偶数
+            while (i < arr.size() && (arr[i] & 0x1) == 1)
+                ++i;
+
+            if (arr.size() == i)
+                break;
+            /// 存在的话 第一个奇数
+            int j = i + 1;
+            while (j < arr.size() && (arr[j] & 0x1) == 0)
+                ++j;
+            if (j >= arr.size())
+                break;
+            int t = arr[j];
+            for (int k = j - 1; k >= i; --k)
+            {
+                arr[k + 1] = arr[k];
+            }
+            arr[i] = t;
+        }
+    }
+};
