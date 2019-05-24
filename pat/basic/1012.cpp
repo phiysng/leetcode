@@ -1,7 +1,7 @@
 #include<cstdio>
 #include<cmath>
 #include<climits>
-#include <iostream>
+#include<iostream>
 #include<vector>
 #include<stack>
 #include<queue>

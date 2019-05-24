@@ -1,6 +1,6 @@
 #include<cstdio>
 #include<cmath>
-#include <iostream>
+#include<iostream>
 #include<vector>
 #include<stack>
 #include<unordered_map>

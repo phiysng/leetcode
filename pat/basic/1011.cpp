@@ -1,4 +1,4 @@
-#include <iostream>
+#include<iostream>
 #include<stack>
 #include<unordered_map>
 #include<cstdio>
