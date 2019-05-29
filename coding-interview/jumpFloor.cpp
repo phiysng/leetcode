@@ -9,6 +9,7 @@ public:
     {
         vector<int> res{ 1, 1, 2 };
         res.resize(number + 1);
+		//可以从下面的第一个/第二个台阶跳到当前台阶 
         for (size_t i = 3; i < number + 1; i++) {
             res[i] = res[i - 1] + res[i - 2];
         }
