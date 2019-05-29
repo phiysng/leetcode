@@ -1,11 +1,11 @@
-#include<iostream>
-#include<stack>
-#include<unordered_map>
-#include<cstdio>
+#include <cstdio>
+#include <iostream>
+#include <stack>
+#include <unordered_map>
 
 using namespace std;
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
     int a, b, c;
     int num = 1;
@@ -17,7 +17,6 @@ int main(int argc, char *argv[])
             printf("Case #%d: true\n", num++);
         else
             printf("Case #%d: false\n", num++);
-
     }
 
     return 0;

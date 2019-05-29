@@ -1,14 +1,14 @@
-#include<cstdio>
-#include<cmath>
-#include<climits>
-#include<iostream>
-#include<vector>
-#include<stack>
-#include<queue>
-#include<unordered_map>
-#include<unordered_set>
-#include<algorithm>
-#include<functional>
+#include <algorithm>
+#include <climits>
+#include <cmath>
+#include <cstdio>
+#include <functional>
+#include <iostream>
+#include <queue>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
@@ -17,7 +17,8 @@ int main()
     int n, shift;
     cin >> n >> shift;
     vector<int> a(n);
-    for (int i = 0; i < n; ++i) scanf("%d", &a[i]);
+    for (int i = 0; i < n; ++i)
+        scanf("%d", &a[i]);
     vector<int> cp(a.begin(), a.end());
     shift %= n;
     for (int i = 0; i < n; ++i) {

@@ -1,14 +1,14 @@
-#include<cstdio>
-#include<cmath>
-#include<climits>
-#include<iostream>
-#include<vector>
-#include<stack>
-#include<queue>
-#include<unordered_map>
-#include<unordered_set>
-#include<algorithm>
-#include<functional>
+#include <algorithm>
+#include <climits>
+#include <cmath>
+#include <cstdio>
+#include <functional>
+#include <iostream>
+#include <queue>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
@@ -16,18 +16,28 @@ struct info {
     string s_;
     int score_;
     int nu_;
-    info(string s, int score, int nu): s_(s), score_(score), nu_(nu) {}
+    info(string s, int score, int nu)
+        : s_(s)
+        , score_(score)
+        , nu_(nu)
+    {
+    }
 };
 struct all_score {
 
-    double t_ ;
-    double a_ ;
+    double t_;
+    double a_;
     double b_;
     int n = 0;
-    all_score(double t = 0, double a = 0, double b = 0): t_(t), a_(a), b_(b) {}
+    all_score(double t = 0, double a = 0, double b = 0)
+        : t_(t)
+        , a_(a)
+        , b_(b)
+    {
+    }
 };
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
     int n;
     cin >> n;
@@ -55,7 +65,7 @@ int main(int argc, char *argv[])
     vector<info> res;
     for (auto i : scores) {
         res.push_back(info(i.first, (int)(i.second.t_ * 1.5 + i.second.a_ + 1.0 * i.second.b_ / 1.5),
-                           i.second.n));
+            i.second.n));
     }
     sort(res.begin(), res.end(), [](info a, info b) {
         if (a.score_ == b.score_) {
@@ -64,14 +74,17 @@ int main(int argc, char *argv[])
             } else {
                 return a.nu_ < b.nu_;
             }
-        } else return a.score_ > b.score_;
+        } else
+            return a.score_ > b.score_;
     });
     printf("%zu\n", res.size());
     vector<int> rank(res.size());
     rank[0] = 1;
-    for (int i = 1   ; i < res.size(); ++i) {
-        if (res[i].score_ == res[i - 1].score_) rank[i] = rank[i - 1];
-        else rank[i] = i + 1;
+    for (int i = 1; i < res.size(); ++i) {
+        if (res[i].score_ == res[i - 1].score_)
+            rank[i] = rank[i - 1];
+        else
+            rank[i] = i + 1;
     }
     //cout << 1 << " " << res[0].s_ << " " << res[0].score_ << " " << res[0].nu_ << endl;
     for (int i = 0; i < res.size(); ++i) {

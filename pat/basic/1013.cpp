@@ -1,11 +1,11 @@
-#include<cstdio>
-#include<cmath>
-#include<iostream>
-#include<vector>
-#include<stack>
-#include<queue>
-#include<unordered_map>
-#include<unordered_set>
+#include <cmath>
+#include <cstdio>
+#include <iostream>
+#include <queue>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 /*
 这个题审题不清 结果素数筛选法上少算了数字，
 以为是在1-10000范围内的素数，实际上是第1-10000个素数，所以被卡
@@ -15,7 +15,7 @@
 
 using namespace std;
 
-void prime_func(vector<int> &res)
+void prime_func(vector<int>& res)
 {
     for (int i = 2; i < res.size(); ++i) {
         if (res[i]) {
@@ -24,9 +24,8 @@ void prime_func(vector<int> &res)
             }
         }
     }
-
 }
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
     vector<int> is_prime(1000000, 1);
     is_prime[0] = 0;
@@ -40,8 +39,10 @@ int main(int argc, char *argv[])
 
         if (is_prime[i]) {
             ++cnt;
-            if (m > cnt) continue;
-            if (n < cnt) break;
+            if (m > cnt)
+                continue;
+            if (n < cnt)
+                break;
 
             res.push_back(i);
         }
@@ -53,8 +54,8 @@ int main(int argc, char *argv[])
             printf(" ");
         }
         printf("%d", res[i]);
-        if (t % 10 == 0) printf("\n");
-
+        if (t % 10 == 0)
+            printf("\n");
     }
     return 0;
 }

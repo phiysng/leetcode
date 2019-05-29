@@ -7,10 +7,9 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-class Solution
-{
+class Solution {
 public:
-    int maxDepth(TreeNode *root)
+    int maxDepth(TreeNode* root)
     {
         if (root == nullptr)
             return 0;

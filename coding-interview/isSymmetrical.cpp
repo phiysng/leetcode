@@ -11,14 +11,13 @@ struct TreeNode {
 };
 */
 
-class Solution
-{
+class Solution {
 public:
-    bool isSymmetrical(TreeNode *pRoot)
+    bool isSymmetrical(TreeNode* pRoot)
     {
         return isSymmetrical(pRoot, pRoot);
     }
-    bool isSymmetrical(TreeNode *pRootLeft, TreeNode *pRootRight)
+    bool isSymmetrical(TreeNode* pRootLeft, TreeNode* pRootRight)
     {
         if (!pRootLeft && !pRootRight)
             return true;

@@ -7,10 +7,9 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-class Solution
-{
+class Solution {
 public:
-    TreeNode *invertTree(TreeNode *root)
+    TreeNode* invertTree(TreeNode* root)
     {
         if (!root)
             return nullptr;

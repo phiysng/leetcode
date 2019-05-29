@@ -9,10 +9,9 @@ struct TreeNode {
 			val(x), left(NULL), right(NULL) {
 	}
 };*/
-class Solution
-{
+class Solution {
 public:
-    void Mirror(TreeNode *pRoot)
+    void Mirror(TreeNode* pRoot)
     {
         if (!pRoot)
             return;
@@ -22,12 +21,10 @@ public:
             return;
 
         swap(pRoot->left, pRoot->right);
-        if (pRoot->left)
-        {
+        if (pRoot->left) {
             Mirror(pRoot->left);
         }
-        if (pRoot->right)
-        {
+        if (pRoot->right) {
             Mirror(pRoot->right);
         }
     }

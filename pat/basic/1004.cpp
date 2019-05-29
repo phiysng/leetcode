@@ -11,7 +11,6 @@ int main()
     int max_num = -1;
     string max_record;
 
-
     string min_t;
     int min_num = 110;
     string min_record;
@@ -27,13 +26,11 @@ int main()
             max_t = t;
             max_record = record;
             max_num = score;
-
         }
         if (score < min_num) {
             min_t = t;
             min_record = record;
             min_num = score;
-
         }
     }
     cout << max_t << " " << max_record << endl;

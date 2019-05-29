@@ -11,14 +11,12 @@
 */
 
 /// 同样可以基于递归实现 代码更易于理解
-class Solution
-{
+class Solution {
 public:
-    vector<int> printListFromTailToHead(ListNode *head)
+    vector<int> printListFromTailToHead(ListNode* head)
     {
         vector<int> res;
-        while (head)
-        {
+        while (head) {
             res.push_back(head->val);
             head = head->next;
         }

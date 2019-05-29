@@ -7,10 +7,9 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-class Solution
-{
+class Solution {
 public:
-    int sumRootToLeaf(TreeNode *root)
+    int sumRootToLeaf(TreeNode* root)
     {
         if (!root)
             return 0;
@@ -18,16 +17,14 @@ public:
         dfs(root, res, t);
         return res;
     }
-    void dfs(TreeNode *root, int &sum, int t)
+    void dfs(TreeNode* root, int& sum, int t)
     {
         t *= 2;
         t += root->val;
         if (!root->left && !root->right) //leaf
         {
             sum += t;
-        }
-        else
-        {
+        } else {
             if (root->left)
                 dfs(root->left, sum, t);
             if (root->right)

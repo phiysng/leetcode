@@ -1,16 +1,15 @@
-#include<cstdio>
-#include<cmath>
+#include <cmath>
+#include <cstdio>
 #include <iostream>
-#include<vector>
-#include<stack>
-#include<queue>
-#include<unordered_map>
-#include<unordered_set>
-
+#include <queue>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
     string s, v;
     getline(cin, s);

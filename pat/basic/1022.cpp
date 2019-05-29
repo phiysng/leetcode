@@ -1,14 +1,14 @@
-#include<cstdio>
-#include<cmath>
-#include<climits>
-#include<iostream>
-#include<vector>
-#include<stack>
-#include<queue>
-#include<unordered_map>
-#include<unordered_set>
-#include<algorithm>
-#include<functional>
+#include <algorithm>
+#include <climits>
+#include <cmath>
+#include <cstdio>
+#include <functional>
+#include <iostream>
+#include <queue>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
@@ -17,7 +17,7 @@ int main()
     int64_t a, b, x;
     cin >> a >> b >> x;
     int64_t sum = a + b;
-    if(sum==0){
+    if (sum == 0) {
         printf("0\n");
         return 0;
     }

@@ -7,22 +7,19 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-class Solution
-{
+class Solution {
 public:
-    bool isCousins(TreeNode *root, int x, int y)
+    bool isCousins(TreeNode* root, int x, int y)
     {
         unordered_set<int> set;
-        queue<TreeNode *> q;
+        queue<TreeNode*> q;
         if (!root)
             return false;
         q.push(root);
-        while (!q.empty())
-        {
+        while (!q.empty()) {
             size_t size = q.size();
-            for (size_t i = 0; i < size; i++)
-            {
-                TreeNode *p = q.front();
+            for (size_t i = 0; i < size; i++) {
+                TreeNode* p = q.front();
                 if (p->left && p->right && (p->left->val == x && p->right->val == y || p->left->val == y && p->right->val == x))
                     return false;
                 q.pop();

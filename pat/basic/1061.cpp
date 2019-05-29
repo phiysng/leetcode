@@ -1,16 +1,15 @@
-#include<cstdio>
-#include<cmath>
+#include <cmath>
+#include <cstdio>
 #include <iostream>
-#include<vector>
-#include<stack>
-#include<queue>
-#include<unordered_map>
-#include<unordered_set>
-
+#include <queue>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
     int n, m;
     cin >> n >> m;
@@ -30,7 +29,8 @@ int main(int argc, char *argv[])
         for (int j = 0; j < m; ++j) {
             int x;
             cin >> x;
-            if (x == ans[j]) res += points[j];
+            if (x == ans[j])
+                res += points[j];
         }
         cout << res << endl;
     }

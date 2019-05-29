@@ -1,5 +1,4 @@
-class Solution
-{
+class Solution {
 public:
     bool backspaceCompare(string S, string T)
     {
@@ -13,39 +12,31 @@ public:
     string transform(string S)
     {
         stack<int> s;
-        for (char c : S)
-        {
+        for (char c : S) {
             s.push(c);
         }
         string res = "";
 
-        while (!s.empty())
-        {
+        while (!s.empty()) {
             if (s.top() == '#') //退格时
             {
                 s.pop();
                 int times = 1;
                 /// 当存在多个连续退格键时 注意退格键可能比剩余的字符更多
                 /// 需要检测栈是否为空
-                while (times)
-                {
+                while (times) {
 
-                    if (!s.empty() && s.top() == '#')
-                    {
+                    if (!s.empty() && s.top() == '#') {
                         ++times;
                         s.pop();
-                    }
-                    else
-                    {
+                    } else {
                         if (s.empty())
                             break;
                         s.pop();
                         --times;
                     }
                 }
-            }
-            else
-            {
+            } else {
                 res += s.top();
                 s.pop();
             }

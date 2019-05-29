@@ -1,21 +1,22 @@
-#include <cstdio>
-#include <iostream>
-#include <stack>
-#include <vector>
-#include <string>
 #include <algorithm>
 #include <array>
+#include <cstdio>
+#include <iostream>
 #include <list>
+#include <stack>
+#include <string>
 #include <unordered_map>
+#include <vector>
 //#include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    int arr[256] = {0};
+int main()
+{
+    int arr[256] = { 0 };
 
     string s;
     getline(cin, s);
-//    cout << s << endl;
+    //    cout << s << endl;
     for (auto x : s) {
         if (isalpha(x))
             arr[tolower(x)]++;
@@ -27,7 +28,6 @@ int main() {
             num = arr[i];
             idx = i;
         }
-
     }
     printf("%c %d", idx, num);
     return 0;

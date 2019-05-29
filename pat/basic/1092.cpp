@@ -1,14 +1,14 @@
-#include<cstdio>
-#include<cmath>
-#include<climits>
-#include<iostream>
-#include<vector>
-#include<stack>
-#include<queue>
-#include<unordered_map>
-#include<unordered_set>
-#include<algorithm>
-#include<functional>
+#include <algorithm>
+#include <climits>
+#include <cmath>
+#include <cstdio>
+#include <functional>
+#include <iostream>
+#include <queue>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
@@ -28,7 +28,8 @@ int main()
     printf("%d\n", max_sales);
     vector<int> cites;
     for (size_t i = 0; i < arr.size(); ++i) {
-        if (arr[i] == max_sales) cites.emplace_back(i + 1);
+        if (arr[i] == max_sales)
+            cites.emplace_back(i + 1);
     }
     for (size_t i = 0; i < cites.size() - 1; ++i) {
         printf("%d ", cites[i]);

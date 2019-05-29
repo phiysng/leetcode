@@ -1,14 +1,13 @@
-#include<cstdio>
-#include<cmath>
+#include <cmath>
+#include <cstdio>
 #include <iostream>
-#include<vector>
-#include<stack>
-#include<unordered_map>
-
+#include <stack>
+#include <unordered_map>
+#include <vector>
 
 using namespace std;
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
     int n;
     double rate;
@@ -22,7 +21,7 @@ int main(int argc, char *argv[])
         for (int j = 0; j < days; ++j) {
             double m;
             cin >> m;
-            if (m < rate ) {
+            if (m < rate) {
                 ++low;
             }
         }

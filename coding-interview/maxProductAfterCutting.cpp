@@ -2,8 +2,7 @@
 
 /// 可证 3*(m-3) >= 2*(n-2) > n 当 n >= 5
 
-class Solution
-{
+class Solution {
 public:
     int maxProductAfterCutting(int length)
     {

@@ -1,15 +1,15 @@
-#include<cstdio>
-#include<cmath>
-#include<climits>
-#include<iostream>
-#include<string>
-#include<vector>
-#include<stack>
-#include<queue>
-#include<unordered_map>
-#include<unordered_set>
-#include<algorithm>
-#include<functional>
+#include <algorithm>
+#include <climits>
+#include <cmath>
+#include <cstdio>
+#include <functional>
+#include <iostream>
+#include <queue>
+#include <stack>
+#include <string>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
@@ -24,8 +24,7 @@ int main()
         cin >> t;
         if (map.find(t) == map.end()) {
             map[t] = 1;
-        }
-        else {
+        } else {
             map[t]++;
         }
     }
@@ -46,7 +45,6 @@ int main()
             sum += a[i] + a[j] * 10;
         }
     }
-    printf("%d\n",sum);
+    printf("%d\n", sum);
     return 0;
-
 }

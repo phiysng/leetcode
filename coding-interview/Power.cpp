@@ -1,7 +1,6 @@
 /// 面试题10 斐波那契数列
 
-class Solution
-{
+class Solution {
 public:
     /// O**0没有意义 返回 0/1都可以
     /// 注意处理 base == 0 && exponent <= 0 的情况
@@ -10,8 +9,7 @@ public:
     double Power(double base, int exponent)
     {
         invalid_value = false;
-        if (base == 0.0 && exponent < 0)
-        {
+        if (base == 0.0 && exponent < 0) {
             ///对0取倒数会出错
             invalid_value = true;
             return 0.0;
@@ -37,8 +35,7 @@ public:
 
         double result = PowerWithUnsignedExponent(base, exponent / 2);
         result *= result;
-        if (exponent & 0x1)
-        {
+        if (exponent & 0x1) {
             result *= base;
         }
         return result;

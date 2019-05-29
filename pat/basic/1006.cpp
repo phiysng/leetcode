@@ -1,14 +1,13 @@
-#include<cstdio>
-#include<cmath>
-#include<iostream>
-#include<vector>
-#include<stack>
-#include<unordered_map>
-
+#include <cmath>
+#include <cstdio>
+#include <iostream>
+#include <stack>
+#include <unordered_map>
+#include <vector>
 
 using namespace std;
 //代码有点丑，直接暴力穷举了
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
     int c;
     cin >> c;

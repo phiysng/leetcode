@@ -1,14 +1,14 @@
-#include<cstdio>
-#include<cmath>
-#include<climits>
-#include<iostream>
-#include<vector>
-#include<stack>
-#include<queue>
-#include<unordered_map>
-#include<unordered_set>
-#include<algorithm>
-#include<functional>
+#include <algorithm>
+#include <climits>
+#include <cmath>
+#include <cstdio>
+#include <functional>
+#include <iostream>
+#include <queue>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
@@ -21,8 +21,7 @@ int main()
     for (char i : seller) {
         if (seller_map.find(i) == seller_map.end()) {
             seller_map[i] = 1;
-        }
-        else {
+        } else {
             seller_map[i]++;
         }
     }
@@ -30,8 +29,7 @@ int main()
     for (char i : need) {
         if (need_map.find(i) == need_map.end()) {
             need_map[i] = 1;
-        }
-        else {
+        } else {
             need_map[i]++;
         }
     }
@@ -40,10 +38,14 @@ int main()
     for (pair<char, int> i : need_map) {
         if (seller_map.find(i.first) == seller_map.end() || seller_map[i.first] < i.second) {
             enough = false;
-            if (seller_map.find(i.first) != seller_map.end()) lack += i.second - seller_map[i.first];
-            else lack += i.second;
+            if (seller_map.find(i.first) != seller_map.end())
+                lack += i.second - seller_map[i.first];
+            else
+                lack += i.second;
         }
     }
-    if (enough) printf("Yes %d\n", seller.size() - need.size());
-    else printf("No %d\n", lack);
+    if (enough)
+        printf("Yes %d\n", seller.size() - need.size());
+    else
+        printf("No %d\n", lack);
 }

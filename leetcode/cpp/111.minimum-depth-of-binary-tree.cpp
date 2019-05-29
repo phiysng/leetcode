@@ -7,22 +7,19 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-class Solution
-{
+class Solution {
 public:
-    int minDepth(TreeNode *root)
+    int minDepth(TreeNode* root)
     {
         if (root == nullptr)
             return 0;
-        queue<TreeNode *> q;
+        queue<TreeNode*> q;
         q.push(root);
         int cnt = 0;
-        while (!q.empty())
-        {
+        while (!q.empty()) {
             size_t size = q.size();
-            for (int i = 0; i < size; ++i)
-            {
-                TreeNode *t = q.front();
+            for (int i = 0; i < size; ++i) {
+                TreeNode* t = q.front();
                 q.pop();
                 if (isLeaf(t))
                     return cnt + 1;
@@ -35,7 +32,7 @@ public:
         }
         return cnt;
     }
-    bool isLeaf(TreeNode *root)
+    bool isLeaf(TreeNode* root)
     {
         // assert(root != nullptr);
         return !root->left && !root->right;

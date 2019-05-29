@@ -1,12 +1,12 @@
 #include <algorithm>
 #include <iostream>
+#include <queue>
 #include <unordered_map>
 #include <vector>
-#include <queue>
 
 using namespace std;
 
-int main(int argc, char const *argv[])
+int main(int argc, char const* argv[])
 {
     int n;
     cin >> n;

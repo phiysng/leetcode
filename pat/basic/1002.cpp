@@ -1,19 +1,19 @@
 #include <iostream>
-#include<stack>
-#include<unordered_map>
+#include <stack>
+#include <unordered_map>
 
 using namespace std;
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
     string in;
     int sum = 0;
     cin >> in;
-    for (char i : in ) {
+    for (char i : in) {
         sum += i - '0';
     }
     stack<int> s;
-    unordered_map < int, string > map;
+    unordered_map<int, string> map;
     map[0] = "ling";
     map[1] = "yi";
     map[2] = "er";

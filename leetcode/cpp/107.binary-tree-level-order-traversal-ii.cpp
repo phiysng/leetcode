@@ -7,22 +7,19 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-class Solution
-{
+class Solution {
 public:
-    vector<vector<int>> levelOrderBottom(TreeNode *root)
+    vector<vector<int>> levelOrderBottom(TreeNode* root)
     {
         if (!root)
             return {};
-        queue<TreeNode *> q;
+        queue<TreeNode*> q;
         q.push(root);
         vector<vector<int>> res(0, vector<int>());
-        while (!q.empty())
-        {
+        while (!q.empty()) {
             int size = q.size();
             vector<int> t;
-            for (int i = 0; i < size; ++i)
-            {
+            for (int i = 0; i < size; ++i) {
                 auto m = q.front();
                 q.pop();
                 t.push_back(m->val);

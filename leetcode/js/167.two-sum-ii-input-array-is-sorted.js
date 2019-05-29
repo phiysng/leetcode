@@ -4,7 +4,7 @@
  * @return {number[]}
  */
 var twoSum = function (numbers, target) {
-    
+
     /// 双指针
     var left = 0, right = numbers.length - 1;
     while (left < right) {

@@ -1,15 +1,15 @@
-#include<cstdio>
-#include<cmath>
-#include<climits>
-#include<iostream>
-#include<string>
-#include<vector>
-#include<stack>
-#include<queue>
-#include<unordered_map>
-#include<unordered_set>
-#include<algorithm>
-#include<functional>
+#include <algorithm>
+#include <climits>
+#include <cmath>
+#include <cstdio>
+#include <functional>
+#include <iostream>
+#include <queue>
+#include <stack>
+#include <string>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 //using namespace vector;
@@ -31,12 +31,11 @@ int main()
     for (int i = 0; i < c; ++i) {
         cin >> arr[i];
     }
-    unordered_set<int> may_single;//可能单身的群体，couple可能没有同时来
+    unordered_set<int> may_single; //可能单身的群体，couple可能没有同时来
     for (int i : arr) {
         if (map.find(i) == map.end()) {
             single.push_back(i);
-        }
-        else {
+        } else {
             may_single.insert(i);
         }
     }
@@ -47,8 +46,8 @@ int main()
     }
     sort(single.begin(), single.end());
     printf("%d\n", single.size());
-    
-    if(single.size() == 0){
+
+    if (single.size() == 0) {
         //printf("\n");
         return 0;
     }

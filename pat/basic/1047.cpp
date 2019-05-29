@@ -1,14 +1,14 @@
-#include<cstdio>
-#include<cmath>
-#include<climits>
-#include<iostream>
-#include<vector>
-#include<stack>
-#include<queue>
-#include<unordered_map>
-#include<unordered_set>
-#include<algorithm>
-#include<functional>
+#include <algorithm>
+#include <climits>
+#include <cmath>
+#include <cstdio>
+#include <functional>
+#include <iostream>
+#include <queue>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
@@ -24,7 +24,8 @@ int main()
     }
     int idx = 0;
     for (int i = 1; i < 10000 + 1; ++i) {
-        if (arr[i] > arr[idx]) idx = i;
+        if (arr[i] > arr[idx])
+            idx = i;
     }
     printf("%d %d\n", idx, arr[idx]);
     return 0;

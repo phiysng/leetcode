@@ -1,27 +1,25 @@
-#include <cstdio>
 #include <cmath>
+#include <cstdio>
 #include <iostream>
-#include <vector>
 #include <stack>
 #include <unordered_map>
 #include <unordered_set>
+#include <vector>
 
 using namespace std;
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
     int n;
     cin >> n;
-    for (int i = 0; i < n; ++i)
-    {
+    for (int i = 0; i < n; ++i) {
         int m;
         cin >> m;
         vector<int> res;
         int a, b;
         a = b = 0;
         unordered_set<int> set;
-        for (int k = 0; k < m; ++k)
-        {
+        for (int k = 0; k < m; ++k) {
             int t;
             cin >> t;
             if (t - 3 <= 0)
@@ -31,16 +29,12 @@ int main(int argc, char *argv[])
         }
         int idx = 0;
         bool con = true;
-        for (int var = 0; var < res.size(); ++var)
-        {
-            if (con)
-            {
+        for (int var = 0; var < res.size(); ++var) {
+            if (con) {
                 con = false;
-                for (int k = 0; k < res.size(); ++k)
-                {
+                for (int k = 0; k < res.size(); ++k) {
                     res[k]--;
-                    if (res[k] == 0)
-                    {
+                    if (res[k] == 0) {
                         ++a;
                         con = true;
                     }
@@ -60,18 +54,12 @@ int main(int argc, char *argv[])
         //                ++a;
         //            }
         //        }
-        if (a > b)
-        {
+        if (a > b) {
             printf("Defile\n");
-        }
-        else
-        {
-            if (a < b)
-            {
+        } else {
+            if (a < b) {
                 printf("Hellfire\n");
-            }
-            else
-            {
+            } else {
                 printf("Tie\n");
             }
         }

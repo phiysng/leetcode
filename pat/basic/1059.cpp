@@ -1,16 +1,15 @@
-#include<cstdio>
-#include<cmath>
+#include <cmath>
+#include <cstdio>
 #include <iostream>
-#include<vector>
-#include<stack>
-#include<queue>
-#include<unordered_map>
-#include<unordered_set>
-
+#include <queue>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
-void prime_func(vector<int> &res)
+void prime_func(vector<int>& res)
 {
     for (int i = 2; i < res.size(); ++i) {
         if (res[i]) {
@@ -19,9 +18,8 @@ void prime_func(vector<int> &res)
             }
         }
     }
-
 }
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
     vector<int> is_prime(10000, 1);
     is_prime[0] = 0;

@@ -1,20 +1,19 @@
-#include<cstdio>
-#include<cmath>
+#include <cmath>
+#include <cstdio>
 #include <iostream>
-#include<vector>
-#include<stack>
-#include<queue>
-#include<unordered_map>
-#include<unordered_set>
-
+#include <queue>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
     int nu;
     cin >> nu;
-    int scores[101] = {0};
+    int scores[101] = { 0 };
     for (int i = 0; i < nu; ++i) {
         int t = 0;
         cin >> t;

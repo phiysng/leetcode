@@ -1,30 +1,29 @@
 /// 30 包含min函数的栈
 
 template <typename T>
-class StackWithMin
-{
+class StackWithMin {
 public:
     StackWithMin() {}
     virtual ~StackWithMin() {}
 
-    T &top();
-    const T &top() const;
+    T& top();
+    const T& top() const;
 
-    void push(const T &value);
+    void push(const T& value);
     void pop();
 
-    const T &min() const;
+    const T& min() const;
 
     bool empty() const;
     size_t size() const;
 
 private:
     std::stack<T> m_data; // 数据栈，存放栈的所有元素
-    std::stack<T> m_min;  // 辅助栈，存放栈的最小元素
+    std::stack<T> m_min; // 辅助栈，存放栈的最小元素
 };
 
 template <typename T>
-void StackWithMin<T>::push(const T &value)
+void StackWithMin<T>::push(const T& value)
 {
     // 把新元素添加到辅助栈
     m_data.push(value);
@@ -47,7 +46,7 @@ void StackWithMin<T>::pop()
 }
 
 template <typename T>
-const T &StackWithMin<T>::min() const
+const T& StackWithMin<T>::min() const
 {
     assert(m_data.size() > 0 && m_min.size() > 0);
 
@@ -56,13 +55,10 @@ const T &StackWithMin<T>::min() const
 
 //重载函数 C++将返回值的类型也作为重载标签的一部分
 template <typename T>
-T &StackWithMin<T>::top()
-{
-    return m_data.top();
-}
+T& StackWithMin<T>::top() { return m_data.top(); }
 
 template <typename T>
-const T &StackWithMin<T>::top() const
+const T& StackWithMin<T>::top() const
 {
     return m_data.top();
 }
@@ -79,11 +75,10 @@ size_t StackWithMin<T>::size() const
     return m_data.size();
 }
 
-/// 稍微不同的实现，min 与data不等大小 除非出现更小或相等的值，否则不向最小栈中添加新的值
+/// 稍微不同的实现，min 与data不等大小
+/// 除非出现更小或相等的值，否则不向最小栈中添加新的值
 
-
-class Solution
-{
+class Solution {
 public:
     void push(int value)
     {
@@ -98,14 +93,8 @@ public:
         if (mins.top() == ret)
             mins.pop();
     }
-    int top()
-    {
-        return s1.top();
-    }
-    int min()
-    {
-        return mins.top();
-    }
+    int top() { return s1.top(); }
+    int min() { return mins.top(); }
 
 private:
     stack<int> s1;

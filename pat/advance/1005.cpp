@@ -1,18 +1,19 @@
-//PAT 甲级 1005 
+//PAT 甲级 1005
 //v1
-#include <cstdio>
-#include <iostream>
-#include <stack>
-#include <vector>
-#include <string>
 #include <algorithm>
 #include <array>
+#include <cstdio>
+#include <iostream>
 #include <list>
+#include <stack>
+#include <string>
 #include <unordered_map>
+#include <vector>
 
 using namespace std;
 
-int main() {
+int main()
+{
     int64_t a;
     cin >> a;
     int64_t sum = 0;
@@ -54,25 +55,26 @@ int main() {
 
 /////////////////////////////////////////
 //v2
-#include <cstdio>
-#include <iostream>
-#include <stack>
-#include <vector>
-#include <string>
 #include <algorithm>
 #include <array>
+#include <cstdio>
+#include <iostream>
 #include <list>
+#include <stack>
+#include <string>
 #include <unordered_map>
+#include <vector>
 //#include <bits/stdc++.h>
 using namespace std;
 
-int main() {
+int main()
+{
 
     string string1;
     cin >> string1;
     int64_t sum = 0;
 
-    for (char c :string1) {
+    for (char c : string1) {
         sum += c - '0';
     }
     vector<int64_t> v;

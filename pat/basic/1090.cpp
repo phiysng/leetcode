@@ -1,14 +1,14 @@
-#include<cstdio>
-#include<cmath>
-#include<climits>
-#include<iostream>
-#include<vector>
-#include<stack>
-#include<queue>
-#include<unordered_map>
-#include<unordered_set>
-#include<algorithm>
-#include<functional>
+#include <algorithm>
+#include <climits>
+#include <cmath>
+#include <cstdio>
+#include <functional>
+#include <iostream>
+#include <queue>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
@@ -16,13 +16,12 @@ int main()
 {
     int a, b;
     cin >> a >> b;
-    unordered_multimap <int, int> map;
+    unordered_multimap<int, int> map;
     for (int i = 0; i < a; ++i) {
         int m, n;
         cin >> m >> n;
-        map.insert(unordered_multimap <int, int>::value_type(m, n));
-        map.insert(unordered_multimap <int, int>::value_type(n, m));
-
+        map.insert(unordered_multimap<int, int>::value_type(m, n));
+        map.insert(unordered_multimap<int, int>::value_type(n, m));
     }
 
     for (int i = 0; i < b; ++i) {
@@ -43,12 +42,10 @@ int main()
                     legal = false;
                     printf("No\n");
                     goto label;
-
                 }
             }
-
         }
-label:
+    label:
         if (legal) {
             printf("Yes\n");
         }

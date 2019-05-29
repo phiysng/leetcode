@@ -13,16 +13,14 @@ public:
     }
 };
 */
-class Solution
-{
+class Solution {
 public:
-    int maxDepth(Node *root)
+    int maxDepth(Node* root)
     {
         if (root == nullptr)
             return 0;
         int max_sub_depth = 0;
-        for (Node *i : root->children)
-        {
+        for (Node* i : root->children) {
             max_sub_depth = max(max_sub_depth, maxDepth(i));
         }
         return max_sub_depth + 1;

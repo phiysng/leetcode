@@ -1,18 +1,17 @@
-#include<cstdio>
-#include<cmath>
-#include<climits>
-#include<iostream>
-#include<string>
-#include<vector>
-#include<stack>
-#include<queue>
-#include<unordered_map>
-#include<unordered_set>
-#include<algorithm>
-#include<functional>
+#include <algorithm>
+#include <climits>
+#include <cmath>
+#include <cstdio>
+#include <functional>
+#include <iostream>
+#include <queue>
+#include <stack>
+#include <string>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
-
 
 int main()
 {
@@ -24,8 +23,7 @@ int main()
         string s = to_string(n);
         s.insert(0, 4 - s.size(), '0');
 
-        sort(s.begin(), s.end(), [](char a, char b)
-        { return a > b; });
+        sort(s.begin(), s.end(), [](char a, char b) { return a > b; });
 
         string s1 = s;
         sort(s1.begin(), s1.end());
@@ -36,7 +34,6 @@ int main()
         s2.insert(0, 4 - s2.size(), '0');
 
         cout << s << " - " << s1 << " = " << s2 << endl;
-    }
-    while (n != 6174 && n != 0);
+    } while (n != 6174 && n != 0);
     return 0;
 }
