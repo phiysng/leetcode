@@ -1,4 +1,8 @@
 /// 3 数组中的重复数字
+
+#include "array_util.h"
+using namespace std;
+
 class Solution {
 public:
     // Parameters:
@@ -58,8 +62,7 @@ public:
             return 0;
         int count = 0;
         for (int i = 0; i < length; i++) {
-            if (numbers[i] >= start && numbers[i] <= end])
-            {
+            if (numbers[i] >= start && numbers[i] <= end) {
                 ++count;
             }
             return count;

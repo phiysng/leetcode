@@ -1,5 +1,8 @@
 /// 面试题10 斐波那契数列
 
+#include "array_util.h"
+using namespace std;
+
 class Solution {
 public:
     int Fibonacci(int n)

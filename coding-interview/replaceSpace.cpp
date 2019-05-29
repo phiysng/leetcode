@@ -1,5 +1,8 @@
 ///面试题5 替换空格
 
+#include "array_util.h"
+using namespace std;
+
 class Solution {
 public:
     void replaceSpace(char* str, int length)
