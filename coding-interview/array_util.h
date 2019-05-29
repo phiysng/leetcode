@@ -16,10 +16,25 @@
 __declspec(dllexport) int Partition(int data[], int length, int start, int end);
 
 struct TreeNode {
-	int val;
-	TreeNode* left;
-	TreeNode* right;
-	TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+    int val;
+    TreeNode* left;
+    TreeNode* right;
+    TreeNode(int x)
+        : val(x)
+        , left(NULL)
+        , right(NULL)
+    {
+    }
 };
+
+struct ListNode {
+    int val;
+    ListNode* next;
+    ListNode(int v, ListNode* _next)
+        : val(v)
+        , next(_next)
+    {
+    }
+}
 
 #endif // ARRAY_UTIL_C

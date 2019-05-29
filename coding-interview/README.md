@@ -50,9 +50,9 @@
 - 47[礼物的最大价值](getMaxValue.cpp)
 - 48[最大不含重复字符的子字符串](longestSubstringWithoutDuplication.cpp)
 - 49[丑数](GetUglyNumber.cpp)
-- 50[第一个只出现一次的字符]()
+- 50[第一个只出现一次的字符](FirstNotRepeatingChar.cpp)
 - 51[数组中的逆序对]()
-- 52[两个链表的第一个公告节点]()
+- 52[两个链表的第一个公共节点](FindFirstCommonNode.cpp)
 - 53[在排序数组中查找数字]()
 - 54[二叉搜索树的第k大节点]()
 - 55[二叉树的深度]()
@@ -67,4 +67,3 @@
 - 64[求 1+2+...+n]()
 - 65[不用加减乘除做加法]()
 - 66[构建乘积数组]()
-
