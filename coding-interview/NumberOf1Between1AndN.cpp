@@ -5,6 +5,8 @@ int NumberOf1(unsigned n)
 {
     int num = 0;
     while (n) {
+        if (n % 10 == 1)
+            ++num;
         n /= 10;
     }
 
