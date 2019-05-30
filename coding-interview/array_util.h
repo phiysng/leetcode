@@ -1,4 +1,4 @@
-#if !defined(ARRAY_UTIL_C)
+#ifndef ARRAY_UTIL_C
 #define ARRAY_UTIL_C
 
 #include <algorithm>
