@@ -24,7 +24,7 @@
 - 21[调整数组顺序使奇数位于偶数前面](./ReorderOddEven.cpp)
 - 22[链表中倒数第k个节点]()
 - 23[链表中环的入口节点]()
-- 24[反转链表]() 🔪🔪最经典的问题之一
+- 24[反转链表](ReverseList.cpp) 🔪🔪最经典的问题之一
 - 25[合并两个排序的链表]()
 - 26[树的子结构]()
 - 27[二叉树的镜像](./MirrorOfBinaryTree.cpp) brew作者面试Google没写出的算法题😀
@@ -33,12 +33,12 @@
 - 30[包含min函数的栈](./MinStack.cpp)
 - 31[栈的压入弹出序列]()
 - 32[从上到下打印二叉树](PrintFromTopToBottom.cpp)
-- 33[二叉搜索树的后序遍历]()
-- 34[二叉树中和为某一值的路径]()
+- 33[二叉搜索树的后序遍历序列](VerifySquenceOfBST.cpp)
+- 34[二叉树中和为某一值的路径](FindPath.cpp)
 - 35[复杂链表的复制]() ⭐⭐
 - 36[二叉搜索树与双向链表]()
 - 37[序列化二叉树]()
-- 38[字符串的排列]()
+- 38[字符串的排列](Permutation.cpp)
 - 39[数组中出现次数超过一半的数字](MoreThanHalfNum.cpp)
 - 40[最小的k个数](GetLeastNumbers.cpp)
 - 41[数据流中的中位数](GetMedian.cpp)

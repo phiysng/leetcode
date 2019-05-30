@@ -1,5 +1,8 @@
 /// 30 包含min函数的栈
 
+#include"array_util.h"
+using namespace std;
+
 template <typename T>
 class StackWithMin {
 public:

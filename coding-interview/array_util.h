@@ -2,6 +2,7 @@
 #define ARRAY_UTIL_C
 
 #include <algorithm>
+#include <assert.h>
 #include <climits>
 #include <cmath>
 #include <cstdio>
