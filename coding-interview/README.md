@@ -4,10 +4,10 @@
 
 
 - 3[数组中重复的数字](./duplicate.cpp)
-- 4[二维数组中的查找]()
+- 4[二维数组中的查找](Find.cpp)
 - 5[替换空格](./ReplaceSpace.cpp)
 - 6[从尾到头打印链表](./printListFromTailToHead.cpp)
-- 7[重建二叉树]()
+- 7[重建二叉树](Construct.cpp)
 - 8[二叉树的下一个节点]()
 - 9[用两个栈实现队列](./QueueWithTwoStacks.cpp)
 - 10[斐波那契额数列](./Fibonacci.cpp) [青蛙跳台阶](./jumpFloor.cpp)
