@@ -5,6 +5,6 @@
 
 此仓库还包含:
 - PAT Basic
-- 剑指Offer
+- [剑指Offer](./coding-interview)
 - hihocoder
 
