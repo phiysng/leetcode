@@ -6,6 +6,7 @@
 #include <climits>
 #include <cmath>
 #include <cstdio>
+#include <cstring>
 #include <functional>
 #include <iostream>
 #include <queue>
