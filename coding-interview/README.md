@@ -11,7 +11,7 @@
 - 8[二叉树的下一个节点](GetNext.cpp)
 - 9[用两个栈实现队列](./QueueWithTwoStacks.cpp)
 - 10[斐波那契额数列](./Fibonacci.cpp) [青蛙跳台阶](./jumpFloor.cpp)
-- 11[旋转数组的最小数字]()
+- 11[旋转数组的最小数字](Min.cpp)
 - 12[矩阵中的路径](hasPath.cpp)
 - 13[机器人🤖的运动范围](movingCount.cpp)
 - 14[剪绳子](./maxProductAfterCutting.cpp)
