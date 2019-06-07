@@ -29,7 +29,7 @@
 - 26[树的子结构](HasSubtree.cpp)
 - 27[二叉树的镜像](MirrorOfBinaryTree.cpp) brew作者面试Google没写出的算法题😀
 - 28[对称的二叉树](isSymmetrical.cpp)
-- 29[顺时针打印矩阵]()
+- 29[顺时针打印矩阵](PrintMatrixClockwisely.cpp)
 - 30[包含min函数的栈](MinStack.cpp)
 - 31[栈的压入弹出序列]()
 - 32[从上到下打印二叉树](PrintFromTopToBottom.cpp)
