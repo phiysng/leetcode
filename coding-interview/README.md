@@ -31,7 +31,7 @@
 - 28[对称的二叉树](isSymmetrical.cpp)
 - 29[顺时针打印矩阵](PrintMatrixClockwisely.cpp)
 - 30[包含min函数的栈](MinStack.cpp)
-- 31[栈的压入弹出序列]()
+- 31[栈的压入弹出序列](isPopOrder.cpp)
 - 32[从上到下打印二叉树](PrintFromTopToBottom.cpp)
 - 33[二叉搜索树的后序遍历序列](VerifySquenceOfBST.cpp)
 - 34[二叉树中和为某一值的路径](FindPath.cpp)
