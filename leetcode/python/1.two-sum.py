@@ -8,4 +8,3 @@ class Solution:
                 return [index,map[rest]]
             else:
                 map[val] = index
-        
