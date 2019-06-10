@@ -6,6 +6,12 @@
 
 class Solution:
     def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
+        '''
+        17 和 21行的后一个检查在此题中是多余的
+        因为题目保证数据有效
+        这道题目的问题一方面是快慢指针
+        另一方面是注意待删除的节点是头节点的情况
+        '''
         dummy = ListNode(-1)
         dummy.next = head
         
