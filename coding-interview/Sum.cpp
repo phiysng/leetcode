@@ -47,7 +47,7 @@ public:
     }
 };
 
-class B : public {
+class B : public A{
 public:
     virtual unsigned int Sum(unsigned int n)
 
