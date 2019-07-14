@@ -6,13 +6,13 @@ var threeSum = function (nums) {
     /// 三指针
     nums.sort((a, b) => a - b);
     let res = []
-    for (var i = 0; i < nums.length - 2; ++i) {
+    for (let i = 0; i < nums.length - 2; ++i) {
         if (i !== 0) {
             if (nums[i] === nums[i - 1]) continue;//重复的元素
         }
-        var left = i + 1, right = nums.length - 1;
+        let left = i + 1, right = nums.length - 1;
         while (left < right) {
-            var sum_v = nums[i] + nums[left] + nums[right];
+            let sum_v = nums[i] + nums[left] + nums[right];
             if (sum_v === 0) {
                 res.push([nums[i], nums[left], nums[right]]);
                 ++left;

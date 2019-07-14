@@ -5,13 +5,13 @@
 
 var majorityElement = function (nums) {
     //摩尔投票法
-    var first = null, second = null;
-    var first_c = 0, second_c = 0;//计数
+    let first = null, second = null;
+    let first_c = 0, second_c = 0;//计数
     if (nums === null || nums.length === 0) {
         return [];
     }
     let res = [];
-    for (var i = 0; i < nums.length; ++i) {
+    for (let i = 0; i < nums.length; ++i) {
         if (first === nums[i]) {
             first_c++;
         }
@@ -35,8 +35,8 @@ var majorityElement = function (nums) {
             }
         }
     }
-    var cnt_a = 0, cnt_b = 0;
-    for (var i = 0; i < nums.length; ++i) {
+    let cnt_a = 0, cnt_b = 0;
+    for (let i = 0; i < nums.length; ++i) {
         if (nums[i] === first) {
             cnt_a++;
         }
