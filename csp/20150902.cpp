@@ -20,7 +20,6 @@ int main()
 		days[2]++;
 	}
 
-	//if(days <)
 	for (size_t i = 1; i < days.size(); i++)
 	{
 		if (day > days[i]) {
