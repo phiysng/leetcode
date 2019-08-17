@@ -1,4 +1,5 @@
-#include <algorithm>                                                                                                                                                                                               #include <cstring>
+#include <algorithm>                                                                                                                                                                                               
+#include <cstring>
 #include <iostream>
 #include <numeric>
 #include <stack>
