@@ -6,11 +6,10 @@ impl Solution {
             match stack.last(){
                 None=>{},
                 Some(&last) =>{
-                    if Solution::pair(last, ch){
+                    if Self::pair(last, ch){
                         stack.pop();
                         continue;
                     }
-                    
                 }
             }
             stack.push(ch);
