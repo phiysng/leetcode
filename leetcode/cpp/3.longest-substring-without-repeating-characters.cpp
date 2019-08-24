@@ -1,5 +1,27 @@
 class Solution {
 public:
+    int lengthOfLongestSubstring(string s) {
+        int max_len = 0;
+        
+        int start = -1;
+        
+        unordered_map<char,int> map;
+        
+        for(int i = 0; i < s.size(); ++i){
+            
+            if(map.find(s[i]) != map.end())
+                start = max(start , map[s[i]]);
+            
+            max_len = max<int>(max_len,i-start);
+            map[s[i]] = i;
+        }
+        return max_len;
+    }
+};
+
+//更直观的版本
+class Solution_v1 {
+public:
 	int lengthOfLongestSubstring(string s) {
 		unordered_map<char, int> map;
 		int res = 0;
