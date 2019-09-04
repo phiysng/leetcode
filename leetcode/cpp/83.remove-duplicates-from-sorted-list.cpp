@@ -6,6 +6,26 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+
+class Solution_recursive {
+public:
+    ListNode* deleteDuplicates(ListNode* head)
+    {
+        if (!head || !head->next) {
+            return head;
+        }
+
+        auto res = deleteDuplicates(head->next);
+
+        if (res->val != head->val) {
+            head->next = res;
+            return head;
+        } else {
+            return res;
+        }
+    }
+};
+
 class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head)
