@@ -6,50 +6,61 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-class Solution {
+class Solution
+{
 public:
-    ListNode* reverseBetween(ListNode* head, int m, int n)
+    ListNode *reverseBetween(ListNode *head, int m, int n)
     {
-        if (!head)
+        ListNode *dummy = new ListNode(-1);
+        dummy->next = head;
+        //待逆置的链表的前一个结点
+        ListNode *prev = dummy;
+
+        for (int i = 0; i < m - 1; ++i)
+        {
+            prev = prev->next;
+        }
+        //待逆置的链表的最后一个结点
+        ListNode *last = prev;
+
+        int distance = n - m + 1;
+        for (int i = 0; i < distance; ++i)
+        {
+            last = last->next;
+        }
+        //待逆置的链表的后一个结点 用于重新串起逆置后的链表
+        ListNode *node = last->next;
+        //断开待逆置的链表
+        last->next = nullptr;
+
+        // 子链表原表头 逆置后链表尾
+        auto init_part_head = prev->next;
+        //逆置后的链表头
+        auto part_head = reverse(prev->next);
+
+        //串起逆转后的链表
+        prev->next = part_head;
+        init_part_head->next = node;
+
+        return dummy->next;
+    }
+
+    ListNode *reverse(ListNode *head)
+    {
+        if (!head || !head->next)
             return head;
 
-        ListNode *curr = head, *prev = nullptr;
+        ListNode *prev = nullptr;
 
-        // 找到要翻转的位置
-        while (m > 1) {
-            prev = curr;
-            curr = curr->next;
-            --m;
-            --n;
+        while (head)
+        {
+            auto next = head->next;
+            head->next = prev;
+
+            prev = head;
+            head = next;
         }
 
-        //  翻转子链表
-        ListNode *conn = prev, *tail = curr;
-
-        ListNode* t = nullptr;
-
-        while (n > 0) {
-            t = curr->next;
-            curr->next = prev;
-            prev = curr;
-            curr = t;
-            --n;
-        }
-
-        // 到最后prev指向原本子链表的最后一个节点 反转后链表的第一个节点
-        // curr则指向后面的第一个没有被翻转的节点(有可能为NULL)
-
-        // 如果是从头节点开始翻转
-        // conn保存着反转节点前面的一个节点 而 tail指向原来的子链表的表头 反转后的表位
-        if (conn == nullptr) {
-            head = prev;
-        } else {
-            conn->next = prev;
-        }
-
-        //原本子链表的表头作为现在的表位
-        tail->next = curr;
-
-        return head;
+        return prev;
     }
 };
