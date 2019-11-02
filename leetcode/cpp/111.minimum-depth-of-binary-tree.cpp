@@ -7,6 +7,8 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
+
+// 层次迭代
 class Solution {
 public:
     int minDepth(TreeNode* root)
@@ -35,6 +37,26 @@ public:
     bool isLeaf(TreeNode* root)
     {
         // assert(root != nullptr);
+        return !root->left && !root->right;
+    }
+};
+
+// recursively
+class Solution {
+public:
+    int minDepth(TreeNode* root) {
+        if(!root) return 0;
+        if(isLeaf(root)) return 1;
+        
+        int left = minDepth(root->left);
+        int right = minDepth(root->right);
+        // careful about one child to be null
+        if(left == 0) return right + 1;
+        if(right == 0) return left + 1;
+        return min(left,right) + 1;
+    }
+    
+    bool isLeaf(TreeNode* root){
         return !root->left && !root->right;
     }
 };
