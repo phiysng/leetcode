@@ -6,24 +6,24 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-class Solution {
+class Solution
+{
 public:
-    bool hasCycle(ListNode* head)
+    bool hasCycle(ListNode *head)
     {
         if (!head || !head->next)
             return false;
 
-        auto quick = head->next;
+        auto quick = head;
+        auto slow = head;
 
-        while (head && quick) {
-            head = head->next;
+        while (quick && quick->next)
+        {
+            slow = slow->next;
 
-            if (quick->next == nullptr) {
-                return false;
-            }
             quick = quick->next->next;
 
-            if (head != nullptr && head == quick)
+            if (slow == quick)
                 return true;
         }
 
