@@ -5,6 +5,7 @@ class Solution:
                 # nums[i] , nums[nums[i] - 1] = nums[nums[i] - 1] , nums[i]
                 """
                 TODO: python的swap语法糖不能这样用 swap的idx依赖list的值,而list的值在交换的过程中是不确定的
+                see https://stackoverflow.com/questions/14836228/is-there-a-standardized-method-to-swap-two-variables-in-python/14836456#14836456
                 """
                 self.swap(nums, i, nums[i] - 1)
 
