@@ -3,6 +3,7 @@
 LeetCode
 - C++
 - Python
+- Scala
 - Rust
 - JavaScript
 
