@@ -2,6 +2,7 @@
 
 LeetCode
 - C++
+- Java
 - Python
 - Scala
 - Rust
