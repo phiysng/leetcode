@@ -1,5 +1,7 @@
 class Solution {
 public:
+    // TODO: not optimal solution but a more generic solution
+    // have not make use of  the condition the question gives. 
     bool searchMatrix(vector<vector<int>>& matrix, int target)
     {
         if (matrix.size() == 0)
