@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 // O(n^2)
 class Solution_v1 {
     public int jump(int[] nums) {
