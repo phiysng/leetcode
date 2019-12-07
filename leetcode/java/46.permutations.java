@@ -15,7 +15,6 @@ class Solution {
     private void backtrace(int[] nums, int i, List<List<Integer>> res) {
         if (i == nums.length - 1) {
             res.add(Arrays.stream(nums).boxed().collect(Collectors.toList()));
-            System.out.println(Arrays.toString(nums));
             return;
         }
 
