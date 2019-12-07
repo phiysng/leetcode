@@ -18,6 +18,6 @@ class Solution:
         left , right = self._rob(root.left)
         lleft , rright = self._rob(root.right)
         
-        # left: max_v you can get from child node.
+        # left: max_value you can get from child node.
         # right max_value you can get without root node.
         return (max(left + lleft, root.val + right + rright), left + lleft)
