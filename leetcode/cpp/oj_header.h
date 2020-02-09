@@ -1,5 +1,6 @@
 #ifndef OJ_H
 #define OJ_H
+#include <string>
 #include <algorithm>
 #include <deque>
 #include <iostream>
