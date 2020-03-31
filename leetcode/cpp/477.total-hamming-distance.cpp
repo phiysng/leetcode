@@ -20,8 +20,8 @@ public:
 
         const int _size = nums.size();
 
-        return std::accumulate(begin(bits),end(bits),0,[=](int bit){
-            return bit * (_size - bit);
+        return std::accumulate(begin(bits), end(bits), 0, [=](int res, int bit) {
+            return res + bit * (_size - bit);
         });
     }
 };
