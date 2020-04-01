@@ -1,52 +1,60 @@
-class LRUCache {
+#include <queue>
+#include <list>
+#include <unordered_map>
+#include <iostream>
+using namespace std;
+
+class LRUCache
+{
 public:
     LRUCache(int capacity)
     {
-        this->cap = capacity;
+        cap = capacity;
     }
 
     int get(int key)
     {
-        auto it = map.find(key);
-        if (it == map.end())
+        if (map.find(key) == map.end())
+        {
             return -1;
+        }
 
-        // key exists
-        auto kv = *map[key];
+        int value = map[key]->second;
+        // update to the front of the list.
 
-        cache.erase(map[key]);
-        cache.push_front(kv);
+        l.erase(map[key]);
 
-        map[key] = cache.begin();
-        return kv.second;
+        l.push_front(make_pair(key, value));
+        map[key] = l.begin();
+        return value;
     }
 
     void put(int key, int value)
     {
-        auto it = map.find(key);
-        if (it == map.end()) {
-            //不存在
-            //容量已满时 删除最后一个节点
-            if (cache.size() == cap) {
-                auto lastPair = cache.back();
-                int lastKey = lastPair.first;
-                map.erase(lastKey);
-                cache.pop_back();
-            }
-            cache.push_front(make_pair(key, value));
-            map[key] = cache.begin();
-        } else {
-            //已存在
-            cache.erase(map[key]);
-            cache.push_front(make_pair(key, value));
-            map[key] = cache.begin();
+        // if exists delete old
+        if (map.find(key) != map.end())
+        {
+            l.erase(map[key]);
+            l.push_front(make_pair(key, value));
+            map[key] = l.begin();
         }
+
+        //delete the last node if cap is maximun.
+        if (l.size() >= cap)
+        {
+            pair<int, int> back = l.back();
+            map.erase(back.first);
+            l.pop_back();
+        }
+
+        l.push_front((make_pair(key, value)));
+        map[key] = l.begin();
     }
 
 private:
     int cap;
-    list<pair<int, int>> cache;
-    unordered_map<int, list<pair<int, int>>::iterator> map; //到链表的映射
+    list<pair<int, int>> l;
+    unordered_map<int, list<pair<int, int>>::iterator> map;
 };
 
 /**
