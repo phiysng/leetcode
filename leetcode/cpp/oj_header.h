@@ -2,6 +2,7 @@
 #define OJ_H
 #include <string>
 #include <algorithm>
+#include <array>
 #include <deque>
 #include <iostream>
 #include <math.h>
