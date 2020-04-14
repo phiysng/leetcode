@@ -18,6 +18,7 @@ public:
 
         auto rest = reverseList(head->next); //反转后n-1个链表
         head->next->next = head;
+        /// \note 反转后的链表的尾结点应当指向 `nullptr`
         head->next = nullptr;
 
         return rest;
