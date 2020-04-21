@@ -15,9 +15,9 @@ class Solution:
         if(root == None):
             return (0 , 0)
         
-        left , right = self._rob(root.left)
-        lleft , rright = self._rob(root.right)
+        left_max_v , left_max_no_root_v = self._rob(root.left)
+        right_max_v , right_max_no_root_v = self._rob(root.right)
         
-        # left: max_value you can get from child node.
-        # right max_value you can get without root node.
-        return (max(left + lleft, root.val + right + rright), left + lleft)
+        # tuple[0]: max_value you can get from one node.
+        # tuple[1]  max_value you can get without this node.
+        return (max(left_max_v + right_max_v, root.val + left_max_no_root_v + right_max_no_root_v), left_max_v + right_max_v)

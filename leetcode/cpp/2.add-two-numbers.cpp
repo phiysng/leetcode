@@ -1,3 +1,5 @@
+#include "oj_header.h"
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -6,7 +8,6 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-//#include<oj_header.h>
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2)
