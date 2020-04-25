@@ -1,5 +1,8 @@
 from typing import List
 
+# valid ip address has 4 number, each of them is [0,255] and is valid decimal number
+# which indicates we need to rule out number like this : [01,00]
+
 
 class Solution:
     def __init__(self):
@@ -11,6 +14,7 @@ class Solution:
 
         return self.validIp
     # ip is either 0 or 123 , 0 can't be the hightest bit of non-zero number
+
     def checkValidIpNum(self, s: str):
         return len(s) != 1 and s[0] == '0'
 
@@ -43,5 +47,6 @@ class Solution:
             if int(sub_s) > 255:
                 continue
             partial.append(sub_s)
+            # recursive to next level
             self._restoreIpAddresses(s[i:], partial, iteration - 1)
-            partial.pop()
+            partial.pop()  # pay attention, DFS need to pop this back
