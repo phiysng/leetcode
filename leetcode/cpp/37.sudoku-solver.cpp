@@ -1,3 +1,5 @@
+#include "oj_header.h"
+
 class Solution {
 public:
     void solveSudoku(vector<vector<char>>& board)
