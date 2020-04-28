@@ -34,7 +34,7 @@ class Solution:
             for i in range(1, 10):
                 if can_place(row, col, str(i)):
                     board[row][col] = str(i)
-                    # print(board)
+
                     if back_track(row, col + 1):
                         return True
                     board[row][col] = '.'
