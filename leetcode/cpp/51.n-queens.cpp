@@ -22,6 +22,7 @@ public:
     void set_position(int row, int col)
     {
         cols[col] = 1;
+        // TODO: see python impl for details.
         major_diagonal[row - col + _n - 1] = 1;
         minor_diagonal[row + col] = 1;
     }
