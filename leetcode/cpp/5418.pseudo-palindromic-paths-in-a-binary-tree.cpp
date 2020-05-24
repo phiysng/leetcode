@@ -19,7 +19,7 @@ public:
         {
             //
             int odd_num = std::count_if(begin(map), end(map), [](const auto &e) {
-                return e->second % 2 == 1;
+                return e.second % 2 == 1;
             });
 
             if (odd_num <= 1)
