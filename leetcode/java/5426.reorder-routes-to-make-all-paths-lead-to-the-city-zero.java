@@ -1,3 +1,5 @@
+import java.util.HashSet;
+
 class Solution {
     public int minReorder(int n, int[][] cons) {
         int count = 0;
