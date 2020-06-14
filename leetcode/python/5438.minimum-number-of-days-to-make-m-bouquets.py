@@ -40,3 +40,20 @@ class Solution:
         sub_ = ''.join(map(str, view)).split('0')
         cnt = sum(len(x) // k for x in sub_)
         return cnt >= m
+    
+    # 参考第二十一名周赛同学的答案 反而更慢了
+    def isValid_(self, view: List[int], m: int, k: int) -> bool:
+            n = len(view)
+            view = [0] + view
+            
+            for i in range(len(view)):
+                view[i] += view[i-1]
+            cnt = 0
+            i  = 1
+            while( i + k -1 <= n):
+                if view[i+k-1] - view[i-1] == k:
+                    cnt += 1
+                    i += k - 1
+
+                i += 1
+            return cnt >= m
