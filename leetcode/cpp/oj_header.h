@@ -13,7 +13,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
-
+// for convenience only! not recommended in real world project.
 using namespace std;
 struct TreeNode
 {
