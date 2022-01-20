@@ -2,3 +2,4 @@
 .pytest_cache/
 leetcode.pro.user
 leetcode/rust/target/
+leetcode/cpp/build/
