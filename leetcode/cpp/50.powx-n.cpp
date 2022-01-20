@@ -1,3 +1,5 @@
+#include "oj_header.h"
+
 class Solution {
 public:
     double myPow(double x, int n)

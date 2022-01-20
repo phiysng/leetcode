@@ -1,3 +1,5 @@
+#include "oj_header.h"
+
 struct CompareBySecond {
     constexpr bool operator()(pair<int, int> const& a,
         pair<int, int> const& b) const noexcept

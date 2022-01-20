@@ -1,3 +1,5 @@
+#include "oj_header.h"
+
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -42,7 +44,7 @@ public:
 };
 
 // recursively
-class Solution {
+class Solution_recursive {
 public:
     int minDepth(TreeNode* root) {
         if(!root) return 0;

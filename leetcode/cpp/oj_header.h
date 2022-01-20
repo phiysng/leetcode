@@ -6,11 +6,13 @@
 #include <deque>
 #include <iostream>
 #include <math.h>
+#include <optional>
 #include <queue>
 #include <stack>
 #include <numeric>
 #include <unordered_map>
 #include <unordered_set>
+
 
 using namespace std;
 struct TreeNode
@@ -29,6 +31,19 @@ struct ListNode
     int val;
     ListNode *next;
     explicit ListNode(int x) : val(x), next(NULL) {}
+};
+
+class Node {
+public:
+	int val;
+	vector<Node*> children;
+
+	Node() {}
+
+	Node(int _val, vector<Node*> _children) {
+		val = _val;
+		children = _children;
+	}
 };
 
 #endif // OJ_H

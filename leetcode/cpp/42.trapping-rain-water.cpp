@@ -62,7 +62,7 @@ public:
 };
 
 /// borrowed from leetcode.
-class Solution
+class Solution_v2
 {
 public:
     int trap(vector<int> &height)

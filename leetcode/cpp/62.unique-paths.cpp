@@ -1,3 +1,5 @@
+#include "oj_header.h"
+
 class Solution {
 public:
     int uniquePaths(int m, int n)

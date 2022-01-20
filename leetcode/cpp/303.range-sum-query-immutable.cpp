@@ -1,3 +1,5 @@
+#include "oj_header.h"
+
 class NumArray {
 public:
     NumArray(vector<int>& nums)

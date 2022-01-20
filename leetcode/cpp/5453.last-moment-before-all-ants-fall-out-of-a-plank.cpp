@@ -1,6 +1,5 @@
 #include "oj_header.h"
 
-#include <optional>
 
 /**
  * @brief 碰撞之后改变方向 可以看成比不同方向的蚂蚁直接交错过去了

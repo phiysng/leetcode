@@ -1,3 +1,5 @@
+#include "oj_header.h"
+
 class Solution {
 public:
     bool containsNearbyDuplicate(vector<int>& nums, int k) {

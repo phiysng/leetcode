@@ -1,3 +1,5 @@
+#include "oj_header.h"
+
 class Solution {
 public:
     bool backspaceCompare(string S, string T)

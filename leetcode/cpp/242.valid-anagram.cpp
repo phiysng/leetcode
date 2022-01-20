@@ -1,3 +1,5 @@
+#include "oj_header.h"
+
 class Solution {
 public:
     bool isAnagram(string s, string t)

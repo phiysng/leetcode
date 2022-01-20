@@ -1,3 +1,5 @@
+#include "oj_header.h"
+
 class Solution {
 public:
     vector<int> searchRange(vector<int>& nums, int target)

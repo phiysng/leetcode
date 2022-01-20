@@ -1,3 +1,5 @@
+#include "oj_header.h"
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
