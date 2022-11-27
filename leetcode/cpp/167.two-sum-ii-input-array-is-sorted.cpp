@@ -34,3 +34,36 @@ class Solution {
     return binary_search(nums, mid + 1, end, target);
   }
 };
+
+/**
+ * @brief 双指针
+ *
+ * 0 <= left < right <= numbers.size() - 1
+ * 假设解的坐标分别为i和j,除非i == 0 && j = nums.size(),
+ * 否则肯定是left或right其中一个先到达i/j.
+ *
+ * 假设left先到达i,则此时 nums[left]+nums[right] >= target ,
+ * 此时肯定是right--,left不会再朝右移动 同理, 假设right先到达j,则此时
+ * nums[left]+nums[right] <= target , left--,right不会再向左移动
+ *
+ */
+class SolutioV2 {
+ public:
+  vector<int> twoSum(vector<int>& numbers, int target) {
+    int left = 0;
+    int right = numbers.size() - 1;
+
+    while (left < right) {
+      int value = numbers[left] + numbers[right];
+      if (value == target)
+        return {left + 1, right + 1};
+      if (value > target) {
+        --right;
+      } else {
+        ++left;
+      }
+    }
+
+    return {0, 0};
+  }
+};
