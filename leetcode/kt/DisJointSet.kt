@@ -24,6 +24,9 @@ class DisJointSet(m: Int, n: Int) {
             index = parentIndex
             parentIndex = matrix[parentIndex]
         }
+        // 路径压缩
+        val current = m * _n + n
+        matrix[current] = index
         return index
     }
 
