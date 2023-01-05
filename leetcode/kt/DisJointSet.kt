@@ -41,7 +41,9 @@ class DisJointSet(m: Int, n: Int) {
     fun union(m1: Int, n1: Int, m2: Int, n2: Int) {
         val m1Parent = _parent(m1, n1)
         val m2Parent = _parent(m2, n2)
-        matrix[m2Parent] = m1Parent
+        if (m1Parent != m2Parent) {
+            matrix[m2Parent] = m1Parent
+        }
     }
 
     fun count(): Int {
