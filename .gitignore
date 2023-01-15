@@ -3,3 +3,7 @@
 leetcode.pro.user
 leetcode/rust/target/
 leetcode/cpp/build/
+leetcode/cpp/.cache/
+leetcode/build*/
+leetcode/kt/.idea/
+leetcode/kt/out/
