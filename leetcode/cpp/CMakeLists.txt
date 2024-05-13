@@ -14,3 +14,7 @@ add_compile_options($<$<CXX_COMPILER_ID:MSVC>:/MP>)
 file(GLOB ALL_LEETCODE_CPP_FILES CONFIGURE_DEPENDS "${PROJECT_SOURCE_DIR}/*.h" "${PROJECT_SOURCE_DIR}/*.cpp")
 
 add_library(${PROJECT_NAME} ${ALL_LEETCODE_CPP_FILES})
+target_include_directories(${PROJECT_NAME} PUBLIC .)
+
+add_executable(${PROJECT_NAME}-exe main.cpp)
+target_link_libraries(${PROJECT_NAME}-exe PRIVATE ${PROJECT_NAME})
