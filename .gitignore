@@ -3,6 +3,7 @@
 leetcode.pro.user
 leetcode/rust/target/
 leetcode/cpp/build/
+leetcode/cpp/cmake-build-debug/
 leetcode/cpp/.cache/
 leetcode/build*/
 leetcode/kt/.idea/
