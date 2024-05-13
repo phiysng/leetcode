@@ -1,5 +1,6 @@
 #ifndef OJ_H
 #define OJ_H
+#include <cstdint>
 #include <string>
 #include <algorithm>
 #include <array>
